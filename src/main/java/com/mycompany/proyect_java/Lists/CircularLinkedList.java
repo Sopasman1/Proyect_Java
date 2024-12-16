@@ -118,6 +118,10 @@ public class CircularLinkedList {
         return head;
     }
 
+    public void add(com.mycompany.proyect_java.Nodes.Node newNode) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Clase interna para representar un nodo
     public static class Node {
         int value;

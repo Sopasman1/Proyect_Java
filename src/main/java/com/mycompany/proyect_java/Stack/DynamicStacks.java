@@ -16,6 +16,10 @@ public class DynamicStacks {
         top = null;
     }
 
+    public void push(com.mycompany.proyect_java.Nodes.Node newNode) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Clase interna para representar un nodo de la pila
     private static class Node {
         int data; // Valor del nodo (puedes cambiar el tipo según tus necesidades)

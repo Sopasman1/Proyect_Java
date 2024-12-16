@@ -4,17 +4,130 @@
  */
 package com.mycompany.proyect_java;
 
+import com.mycompany.proyect_java.Binarytree.BinaryTree;
+import com.mycompany.proyect_java.Graph.Edge;
+import com.mycompany.proyect_java.Graph.Graph;
+import com.mycompany.proyect_java.Graph.GraphNode;
+import com.mycompany.proyect_java.Lists.CircularLinkedList;
+import com.mycompany.proyect_java.Lists.DoublyCircularLinkedList;
+import com.mycompany.proyect_java.Lists.DoublyLinkedList;
+import com.mycompany.proyect_java.Lists.LinkedList;
+import com.mycompany.proyect_java.Nodes.DoubleNode;
+import com.mycompany.proyect_java.Nodes.Node;
+import com.mycompany.proyect_java.Queues.CircularQueue;
+import com.mycompany.proyect_java.Queues.DoubleEndedDynamicQueue;
+import com.mycompany.proyect_java.Queues.DoubleEndedStaticQueue;
+import com.mycompany.proyect_java.Queues.DynamicQueue;
+import com.mycompany.proyect_java.Queues.PriorityQueues;
+import com.mycompany.proyect_java.Queues.PriorityQueues.ListOfLists_PQ;
+import com.mycompany.proyect_java.Queues.PriorityQueues.ListOfVectors_PQ;
+import com.mycompany.proyect_java.Queues.PriorityQueues.VectorOfLists_PQ;
+import com.mycompany.proyect_java.Queues.PriorityQueues.VectorOfVectors_PQ;
+import com.mycompany.proyect_java.Queues.StaticQueue;
+import com.mycompany.proyect_java.Stack.DynamicStacks;
+import com.mycompany.proyect_java.Stack.StaticStack;
+import com.mycompany.proyect_java.SortingAlgorithms.BubbleSort;
+import com.mycompany.proyect_java.SortingAlgorithms.BucketSort;
+import com.mycompany.proyect_java.SortingAlgorithms.CocktailSort;
+import com.mycompany.proyect_java.SortingAlgorithms.CombSort;
+import com.mycompany.proyect_java.SortingAlgorithms.CountingSort;
+import com.mycompany.proyect_java.SortingAlgorithms.GnomeSort;
+import com.mycompany.proyect_java.SortingAlgorithms.HeapSort;
+import com.mycompany.proyect_java.SortingAlgorithms.InsertionSort;
+import com.mycompany.proyect_java.SortingAlgorithms.MergeAlgorithms;
+import com.mycompany.proyect_java.SortingAlgorithms.PigeonHoleSort;
+import com.mycompany.proyect_java.SortingAlgorithms.QuickSort;
+import com.mycompany.proyect_java.SortingAlgorithms.RadixSort;
+import com.mycompany.proyect_java.SortingAlgorithms.SelectionSort;
+import com.mycompany.proyect_java.SortingAlgorithms.ShellSort;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Jezuz
  */
 public class Form_Proyect extends javax.swing.JFrame {
-
+    public LinkedList linkedlist;
+    public DoublyLinkedList doubleLinkedList;
+    public CircularLinkedList circularLinkedList;
+    public DoublyCircularLinkedList doubleCircularLinkedList;
+    public StaticStack staticStack;
+    public DynamicStacks dynamicStack;
+    public StaticQueue staticQueue;
+    public DynamicQueue dynamicQueue;
+    public CircularQueue circularQueue;
+    public DoubleEndedStaticQueue doubleEndedStaticQueue;
+    public DoubleEndedDynamicQueue doubleEndedDynamicQueue;
+    public Graph graph;
+    public int[] numbers;
+    public VectorOfVectors_PQ<Integer> vectorOfVectorsPQ;
+    public VectorOfLists_PQ<Integer> vectorOfListsPQ;
+    public ListOfLists_PQ<Integer> listOfListsPQ;
+    public ListOfVectors_PQ<Integer> listOfVectorsPQ;
+    public BinaryTree.Node;
+             
+    public DefaultListModel<String> listModelSimpleLinkedList;
+    public DefaultListModel<String> listModelDoubleList;
+    public DefaultListModel<String> listModelCircularList;
+    public DefaultListModel<String> listModelDoubleCircularList;
+    public DefaultListModel<String> listModelStaticStack;
+    public DefaultListModel<String> listModelDynamicStack;
+    private Object MessageBox;
     /**
      * Creates new form Form_Proyect
      */
     public Form_Proyect() {
         initComponents();
+        linkedlist = new LinkedList();
+        doubleLinkedList = new DoublyLinkedList();
+        circularLinkedList = new CircularLinkedList();
+        doubleCircularLinkedList = new DoublyCircularLinkedList();
+        staticStack = new StaticStack();
+        dynamicStack = new DynamicStacks();
+        staticQueue = new StaticQueue(5);
+        dynamicQueue = new DynamicQueue();
+        circularQueue = new CircularQueue(5);
+        doubleEndedStaticQueue = new DoubleEndedStaticQueue(5);
+        doubleEndedDynamicQueue = new DoubleEndedDynamicQueue();
+        graph = new Graph();
+        numbers = new int[] { };
+        vectorOfVectorsPQ = new VectorOfVectors_PQ<Integer>();
+        vectorOfListsPQ = new VectorOfLists_PQ<Integer>();
+        listOfListsPQ = new ListOfLists_PQ<Integer>();
+        listOfVectorsPQ = new ListOfVectors_PQ<Integer>();
+        root = new BinaryTree.Node
+        
+        listModelSimpleLinkedList = new DefaultListModel<>();
+        listModelDoubleList = new DefaultListModel<>();
+        listModelCircularList = new DefaultListModel<>();
+        listModelDoubleCircularList = new DefaultListModel<>();
+        listModelStaticStack = new DefaultListModel<>();
+        listModelDynamicStack = new DefaultListModel<>();
+        
+        lstDynamicStack.setModel(listModelDynamicStack);
+        lstStaticStack.setModel(listModelStaticStack);
+        lstSimpleLinkedList.setModel(listModelSimpleLinkedList);
+        lstDoubleList.setModel(listModelDoubleList);
+        lstCircularList.setModel(listModelCircularList);
+        lstDoubleCircularList.setModel(listModelDoubleCircularList);
+        
+        String[] algorithms = {
+     "Gnome Sort", "Heap Sort", "Pigeonhole Sort", "Bubble Sort", "Cocktail Sort", 
+     "Insertion Sort", "Radix MSD Sort", "Radix LSD Sort", "Shell Sort", 
+     "Selection Sort", "Quick Sort", "Merge Sort", "Direct Merge", "Natural Merge", 
+     "Comb Sort", "Counting Sort", "Bucket Sort"
+     };
+
+     // Add items to the combo box
+     for (String algorithm : algorithms) {
+     cmbAlgorithms.addItem(algorithm);
+     }
+
+     // Set the selected index to the first item (index 0)
+     cmbAlgorithms.setSelectedIndex(0);
+           
+        
     }
 
     /**
@@ -48,7 +161,7 @@ public class Form_Proyect extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtValue2 = new javax.swing.JTextField();
+        txtStackValue = new javax.swing.JTextField();
         btnPop = new javax.swing.JButton();
         btnPeek = new javax.swing.JButton();
         btnSize = new javax.swing.JButton();
@@ -166,12 +279,27 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         BtnRemove.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnRemove.setText("Remove");
+        BtnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnRemoveActionPerformed(evt);
+            }
+        });
 
         BtnContains.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnContains.setText("Contains");
+        BtnContains.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnContainsActionPerformed(evt);
+            }
+        });
 
         BtnCout.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnCout.setText("Cout");
+        BtnCout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCoutActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Simple LinkedList");
@@ -195,6 +323,11 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -276,15 +409,35 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnPop.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPop.setText("Pop");
+        btnPop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPopActionPerformed(evt);
+            }
+        });
 
         btnPeek.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPeek.setText("Peek");
+        btnPeek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPeekActionPerformed(evt);
+            }
+        });
 
         btnSize.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSize.setText("Size");
+        btnSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSizeActionPerformed(evt);
+            }
+        });
 
         btnPush.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPush.setText("Push");
+        btnPush.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPushActionPerformed(evt);
+            }
+        });
 
         jScrollPane1.setViewportView(lstStaticStack);
 
@@ -310,7 +463,7 @@ public class Form_Proyect extends javax.swing.JFrame {
                                 .addComponent(jLabel1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(txtValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtStackValue, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(136, 136, 136)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnPop, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -348,7 +501,7 @@ public class Form_Proyect extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtStackValue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(39, 39, 39)
                                         .addComponent(btnPop, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -371,15 +524,35 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnDequeue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDequeue.setText("Dequeue");
+        btnDequeue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDequeueActionPerformed(evt);
+            }
+        });
 
         btnPeekQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPeekQueue.setText("Peek");
+        btnPeekQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPeekQueueActionPerformed(evt);
+            }
+        });
 
         btnEnqueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEnqueue.setText("Enqueue");
+        btnEnqueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnqueueActionPerformed(evt);
+            }
+        });
 
         btnSizeQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSizeQueue.setText("Size");
+        btnSizeQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSizeQueueActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setText("Static Queue");
@@ -476,24 +649,59 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnInsertFront.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnInsertFront.setText("Insert Front");
+        btnInsertFront.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertFrontActionPerformed(evt);
+            }
+        });
 
         btnGetFront.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGetFront.setText("Get Front");
+        btnGetFront.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGetFrontActionPerformed(evt);
+            }
+        });
 
         btnInsertRear.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnInsertRear.setText("Insert Rear");
+        btnInsertRear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertRearActionPerformed(evt);
+            }
+        });
 
         btnDeleteFront.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDeleteFront.setText("Delete Front");
+        btnDeleteFront.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteFrontActionPerformed(evt);
+            }
+        });
 
         btnDeleteRear.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDeleteRear.setText("Delete Rear");
+        btnDeleteRear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteRearActionPerformed(evt);
+            }
+        });
 
         btnGetRear.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGetRear.setText("Get Rear");
+        btnGetRear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGetRearActionPerformed(evt);
+            }
+        });
 
         btnSizeDoubleQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSizeDoubleQueue.setText("Size");
+        btnSizeDoubleQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSizeDoubleQueueActionPerformed(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel14.setText("Whit Vectors");
@@ -588,15 +796,35 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnEnqueuePriorityQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEnqueuePriorityQueue.setText("Enqueue");
+        btnEnqueuePriorityQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnqueuePriorityQueueActionPerformed(evt);
+            }
+        });
 
         btnDequeuePriorityQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDequeuePriorityQueue.setText("Dequeue");
+        btnDequeuePriorityQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDequeuePriorityQueueActionPerformed(evt);
+            }
+        });
 
         btnPeekPriorityQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPeekPriorityQueue.setText("Peek");
+        btnPeekPriorityQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPeekPriorityQueueActionPerformed(evt);
+            }
+        });
 
         btnPriorityQueueSize.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPriorityQueueSize.setText("Size");
+        btnPriorityQueueSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPriorityQueueSizeActionPerformed(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setText("With Vectors of Vector");
@@ -715,14 +943,14 @@ public class Form_Proyect extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
+                .addComponent(jTabbedPane2))
         );
 
         jTabbedPane1.addTab("Queues", jPanel3);
@@ -732,24 +960,59 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnInsertNode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnInsertNode.setText("Insert");
+        btnInsertNode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertNodeActionPerformed(evt);
+            }
+        });
 
         btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnPostOrder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPostOrder.setText("Post Order");
+        btnPostOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPostOrderActionPerformed(evt);
+            }
+        });
 
         btnPreOrder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPreOrder.setText("Pre Order");
+        btnPreOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPreOrderActionPerformed(evt);
+            }
+        });
 
         btnInOrder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnInOrder.setText("In Orden");
+        btnInOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInOrderActionPerformed(evt);
+            }
+        });
 
         btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnClear.setText("Clear Tree");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTreeLayout = new javax.swing.GroupLayout(panelTree);
         panelTree.setLayout(panelTreeLayout);
@@ -843,8 +1106,18 @@ public class Form_Proyect extends javax.swing.JFrame {
         jLabel24.setText("Node Name:");
 
         btnAddNode.setText("Add Node");
+        btnAddNode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddNodeActionPerformed(evt);
+            }
+        });
 
         btnRemoveNode.setText("Remove");
+        btnRemoveNode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveNodeActionPerformed(evt);
+            }
+        });
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel25.setText("Edges");
@@ -861,8 +1134,18 @@ public class Form_Proyect extends javax.swing.JFrame {
         chkDirected.setText("Directed");
 
         btnAddEdge.setText("Add Edge");
+        btnAddEdge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddEdgeActionPerformed(evt);
+            }
+        });
 
         btnRemoveEdge.setText("Remove Edge");
+        btnRemoveEdge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveEdgeActionPerformed(evt);
+            }
+        });
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel29.setText("Traversals");
@@ -871,12 +1154,32 @@ public class Form_Proyect extends javax.swing.JFrame {
         jLabel30.setText("Node Start:");
 
         btnShowDFS.setText("Show DFS Algorithm");
+        btnShowDFS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowDFSActionPerformed(evt);
+            }
+        });
 
         btnShowBFS.setText("Show Bfs Algorithm");
+        btnShowBFS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowBFSActionPerformed(evt);
+            }
+        });
 
         btnShowDFSRecursive.setText("Shoe DFS Recursive");
+        btnShowDFSRecursive.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowDFSRecursiveActionPerformed(evt);
+            }
+        });
 
         btnRemoveAll.setText("Remove All");
+        btnRemoveAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveAllActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -994,9 +1297,19 @@ public class Form_Proyect extends javax.swing.JFrame {
 
         btnSort.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSort.setText("Sort");
+        btnSort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSortActionPerformed(evt);
+            }
+        });
 
         btnSetNumbers.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSetNumbers.setText("Generate Numbers");
+        btnSetNumbers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSetNumbersActionPerformed(evt);
+            }
+        });
 
         jScrollPane16.setViewportView(lstNumbersSort);
 
@@ -1035,18 +1348,1436 @@ public class Form_Proyect extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Verificar si el valor ingresado es un número
+        int value = Integer.parseInt(txtValue.getText());
+
+        // Crear un nuevo nodo con el valor ingresado
+        Node newNode = new Node(value);
+        DoubleNode newDoubleNode = new DoubleNode(value);
+
+        // Agregar el nodo a todas las listas
+        linkedlist.add(newNode);
+        circularLinkedList.add(newNode);
+        doubleLinkedList.add(newDoubleNode);
+        doubleCircularLinkedList.add(newDoubleNode);
+
+        // Limpiar los modelos de las listas
+        listModelSimpleLinkedList.clear();
+        listModelDoubleList.clear();
+        listModelCircularList.clear();
+        listModelDoubleCircularList.clear();
+
+        // Mostrar los valores en los JList
+        showListValues(listModelSimpleLinkedList, linkedlist.getHead());
+        showListValues(listModelDoubleList, doubleLinkedList.getHead());
+        showListValues(listModelCircularList, circularLinkedList.getHead());
+        showListValues(listModelDoubleCircularList, doubleCircularLinkedList.getHead());
+
+        // Limpiar el JTextField después de agregar el nodo
+        txtValue.setText("");
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid numeric value.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+    }
+        
+}
+    private void showListValues(DefaultListModel<String> listModel, Object head) {
+    listModel.clear(); // Limpiar el modelo de datos antes de agregar nuevos valores
+
+    if (head instanceof Node) {
+        // Manejar lista simple o lista simple circular
+        Node current = (Node) head;
+
+        do {
+            listModel.addElement(String.valueOf(current.getValue())); // Agregar el valor al modelo
+            current = current.getNext();
+        } while (current != null && current != head); // Para listas simples y circulares
+    } else if (head instanceof DoubleNode) {
+        // Manejar lista doble o lista doble circular
+        DoubleNode current = (DoubleNode) head;
+
+        do {
+            listModel.addElement(String.valueOf(current.getValue())); // Agregar el valor al modelo
+            current = current.getNext();
+        } while (current != null && current != head); // Para listas dobles y circulares
+    }
+}
+
+// Método auxiliar para mostrar valores en un DefaultListModel
+private void showListValues(DefaultListModel<String> listModel, Node head) {
+    Node current = head;
+    while (current != null) {
+        listModel.addElement(String.valueOf(current.getValue()));
+        current = current.getNext();
+    }
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void BtnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRemoveActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Intentar convertir el texto ingresado en un número entero
+        int value = Integer.parseInt(txtValue.getText());
+
+        // Eliminar el valor de todas las listas
+        linkedlist.remove(value);
+        doubleLinkedList.remove(value);
+        circularLinkedList.remove(value);
+        doubleCircularLinkedList.remove(value);
+
+        // Actualizar los modelos de las listas
+        showListValues(listModelSimpleLinkedList, linkedlist.getHead());
+        showListValues(listModelDoubleList, doubleLinkedList.getHead());
+        showListValues(listModelCircularList, circularLinkedList.getHead());
+        showListValues(listModelDoubleCircularList, doubleCircularLinkedList.getHead());
+
+        // Limpiar el campo de texto después de eliminar el valor
+        txtValue.setText("");
+    } catch (NumberFormatException e) {
+        // Mostrar un mensaje si el valor ingresado no es un número válido
+        JOptionPane.showMessageDialog(this, "Please enter a valid numeric value.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_BtnRemoveActionPerformed
+
+    private void BtnContainsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnContainsActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Intentar convertir el texto ingresado en un número entero
+        int value = Integer.parseInt(txtValue.getText());
+
+        // Verificar si el valor está presente en las listas
+        boolean inSimpleList = linkedlist.contains(value);
+        boolean inDoubleList = doubleLinkedList.contains(value);
+        boolean inCircularList = circularLinkedList.contains(value);
+        boolean inDoubleCircularList = doubleCircularLinkedList.contains(value);
+
+        // Crear el mensaje para mostrar los resultados
+        String message = "Value " + value + " found in:\n" +
+                         "- Simple Linked List: " + inSimpleList + "\n" +
+                         "- Double Linked List: " + inDoubleList + "\n" +
+                         "- Circular Linked List: " + inCircularList + "\n" +
+                         "- Double Circular Linked List: " + inDoubleCircularList;
+
+        // Mostrar el mensaje en un cuadro de diálogo
+        JOptionPane.showMessageDialog(this, message, "Contains Check", JOptionPane.INFORMATION_MESSAGE);
+    } catch (NumberFormatException e) {
+        // Mostrar un mensaje si el valor ingresado no es un número válido
+        JOptionPane.showMessageDialog(this, "Please enter a valid numeric value.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+    }
+
+    // Limpiar el campo de texto después de la verificación
+    txtValue.setText("");
+    }//GEN-LAST:event_BtnContainsActionPerformed
+
+    private void BtnCoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCoutActionPerformed
+        // TODO add your handling code here:
+        // Contar los nodos en cada lista
+    int countSimple = linkedlist.count();
+    int countDouble = doubleLinkedList.count();
+    int countCircular = circularLinkedList.count();
+    int countDoubleCircular = doubleCircularLinkedList.count();
+
+    // Crear el mensaje con los resultados
+    String message = """
+                     Number of nodes in each list:
+                     - Simple Linked List: """ + countSimple + "\n" +
+                     "- Double Linked List: " + countDouble + "\n" +
+                     "- Circular Linked List: " + countCircular + "\n" +
+                     "- Double Circular Linked List: " + countDoubleCircular;
+
+    // Mostrar el mensaje en un cuadro de diálogo
+    JOptionPane.showMessageDialog(this, message, "Node Count", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_BtnCoutActionPerformed
+
+    private void btnPushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPushActionPerformed
+        // TODO add your handling code here:
+        // Verificar si el valor ingresado es un número
+    try {
+        int value = Integer.parseInt(txtStackValue.getText());
+        Node newNode = new Node(Integer.parseInt(txtStackValue.getText()));
+        
+        // Agregar el valor a ambas pilas
+        staticStack.push(value);
+        dynamicStack.push(newNode);
+        
+        // Actualizar las pilas
+        updateStacks();
+        
+        // Limpiar el TextField después de agregar el valor
+        txtStackValue.setText("");
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingresa un valor numérico válido.");
+    }
+    }//GEN-LAST:event_btnPushActionPerformed
+    private void updateStacks() {
+    // Limpiar las listas antes de actualizar
+    lstDynamicStack.clear();
+    lstStaticStack.clear();
+
+    // Actualizar la pila dinámica
+    Node currentNode = dynamicStack.peek();
+    while (currentNode != null) {
+        lstDynamicStack.add(currentNode.getValue());
+        currentNode = currentNode.getNext();
+    }
+
+    // Actualizar la pila estática
+    StaticStack temporal = new StaticStack();
+    String elemento;
+
+    // Mostrar los elementos en la pila estática
+    while (!staticStack.isEmpty()) {
+        elemento = String.valueOf(staticStack.pop());
+        lstStaticStack.add(elemento);
+        temporal.push(Integer.parseInt(elemento));
+    }
+
+    // Restaurar los elementos en la pila original
+    while (!temporal.isEmpty()) {
+        staticStack.push(Integer.parseInt(String.valueOf(temporal.pop())));
+    }
+}
+    
+    private void btnPopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPopActionPerformed
+        // TODO add your handling code here:
+         if (!dynamicStack.isEmpty()) {
+        Node poppedNode = dynamicStack.pop();
+        JOptionPane.showMessageDialog(this, "Element removed from the dynamic stack: " + poppedNode.getValue() +
+                "\nElement removed from the static stack: " + staticStack.pop());
+        updateStacks();
+        return;
+    }
+
+    if (dynamicStack.isEmpty() && staticStack.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Both stacks are empty");
+    }
+    
+    }//GEN-LAST:event_btnPopActionPerformed
+
+    private void btnPeekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeekActionPerformed
+        // TODO add your handling code here:
+         Node topNode = dynamicStack.peek();
+    if (!dynamicStack.isEmpty() || !staticStack.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Element on the top of the dynamic stack is: " + topNode.getValue() +
+                "\nElement on the top of the static stack is: " + staticStack.peek());
+        return;
+    }
+    JOptionPane.showMessageDialog(this, "Both stacks are empty");
+    }//GEN-LAST:event_btnPeekActionPerformed
+
+    private void btnSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSizeActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Current static stack size is: " + staticStack.size() +
+            "\nCurrent dynamic stack size is: " + dynamicStack.size());
+    }//GEN-LAST:event_btnSizeActionPerformed
+
+    private void btnEnqueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnqueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        int value = Integer.parseInt(txtValueSimpleQueue.getText());
+        
+        // Agregar valor a la cola estática
+        if (!staticQueue.isFull()) {
+            staticQueue.enqueue(value);
+            updateQueueDisplay(staticQueue, lstStaticQueue);
+        } else {
+            JOptionPane.showMessageDialog(this, "Static queue is full.", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        // Agregar valor a la cola dinámica
+        dynamicQueue.enqueue(value);
+        updateQueueDisplay(dynamicQueue, lstDynamicQueue);
+
+        // Agregar valor a la cola circular
+        if (!circularQueue.isFull()) {
+            circularQueue.enqueue(value);
+            updateQueueDisplay(circularQueue, lstCircularQueue); // Actualiza la visualización de la cola circular
+        } else {
+            JOptionPane.showMessageDialog(this, "Circular queue is full.", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    txtValueSimpleQueue.setText(""); // Limpiar el TextField después de insertar
+    txtValueSimpleQueue.requestFocus(); // Colocar el cursor nuevamente en el TextField
+    }//GEN-LAST:event_btnEnqueueActionPerformed
+
+    private void btnDequeueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDequeueActionPerformed
+        // TODO add your handling code here:
+         try {
+        StringBuilder message = new StringBuilder();
+
+        // Eliminar un valor de la cola estática
+        if (!staticQueue.isEmpty()) {
+            int dequeuedValueStatic = staticQueue.dequeue();
+            updateQueueDisplay(staticQueue, lstStaticQueue);
+            message.append("Static Queue: ").append(dequeuedValueStatic).append("\n");
+        } else {
+            message.append("Static Queue: Empty\n");
+        }
+
+        // Eliminar un valor de la cola dinámica
+        if (!dynamicQueue.isEmpty()) {
+            int dequeuedValueDynamic = dynamicQueue.dequeue();
+            updateQueueDisplay(dynamicQueue, lstDynamicQueue);
+            message.append("Dynamic Queue: ").append(dequeuedValueDynamic).append("\n");
+        } else {
+            message.append("Dynamic Queue: Empty\n");
+        }
+
+        // Eliminar un valor de la cola circular
+        if (!circularQueue.isEmpty()) {
+            int dequeuedValueCircular = circularQueue.dequeue();
+            updateQueueDisplay(circularQueue, lstCircularQueue);
+            message.append("Circular Queue: ").append(dequeuedValueCircular).append("\n");
+        } else {
+            message.append("Circular Queue: Empty\n");
+        }
+
+        // Mostrar todos los resultados en un solo JOptionPane
+        JOptionPane.showMessageDialog(this, message.toString(), "Dequeued Values", JOptionPane.INFORMATION_MESSAGE);
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+         
+    }//GEN-LAST:event_btnDequeueActionPerformed
+
+    private void btnPeekQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeekQueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        StringBuilder message = new StringBuilder();
+
+        // Ver el valor al frente de la cola estática sin eliminarlo
+        if (!staticQueue.isEmpty()) {
+            int frontValueStatic = staticQueue.peek();
+            message.append("Static Queue: ").append(frontValueStatic).append("\n");
+        } else {
+            message.append("Static Queue: Empty\n");
+        }
+
+        // Ver el valor al frente de la cola dinámica sin eliminarlo
+        if (!dynamicQueue.isEmpty()) {
+            int frontValueDynamic = dynamicQueue.peek();
+            message.append("Dynamic Queue: ").append(frontValueDynamic).append("\n");
+        } else {
+            message.append("Dynamic Queue: Empty\n");
+        }
+
+        // Ver el valor al frente de la cola circular sin eliminarlo
+        if (!circularQueue.isEmpty()) {
+            int frontValueCircular = circularQueue.peek();
+            message.append("Circular Queue: ").append(frontValueCircular).append("\n");
+        } else {
+            message.append("Circular Queue: Empty\n");
+        }
+
+        // Mostrar todos los resultados en un solo JOptionPane
+        JOptionPane.showMessageDialog(this, message.toString(), "Peek Values", JOptionPane.INFORMATION_MESSAGE);
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_btnPeekQueueActionPerformed
+
+    private void btnSizeQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSizeQueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        StringBuilder message = new StringBuilder();
+
+        // Obtener el tamaño de la cola estática
+        int staticQueueSize = staticQueue.size();
+        message.append("Static Queue Size: ").append(staticQueueSize).append("\n");
+
+        // Obtener el tamaño de la cola dinámica
+        int dynamicQueueSize = dynamicQueue.size();
+        message.append("Dynamic Queue Size: ").append(dynamicQueueSize).append("\n");
+
+        // Obtener el tamaño de la cola circular
+        int circularQueueSize = circularQueue.size();
+        message.append("Circular Queue Size: ").append(circularQueueSize).append("\n");
+
+        // Mostrar todos los tamaños en un solo JOptionPane
+        JOptionPane.showMessageDialog(this, message.toString(), "Queue Sizes", JOptionPane.INFORMATION_MESSAGE);
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+         
+    }//GEN-LAST:event_btnSizeQueueActionPerformed
+
+    private void btnInsertFrontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertFrontActionPerformed
+        // TODO add your handling code here:
+        try {
+        String inputValue = txtQueueDoubleValue.getText();
+        if (isInteger(inputValue)) {
+            int value = Integer.parseInt(inputValue);
+
+            // Insertar al frente de la cola estática
+            if (!doubleEndedStaticQueue.isFull()) {
+                doubleEndedStaticQueue.insertFront(value); // Insertar al frente de la cola estática
+
+                // Limpiar y actualizar el ListBox para la cola estática
+                lstQueueDobleVector.clear();
+                for (Integer item : doubleEndedStaticQueue.getQueueElements()) { // Obtener elementos de la cola estática
+                    lstQueueDobleVector.add(item);  // Agregar cada elemento al ListBox de la cola estática
+                }
+            } else {
+                // Manejar el error si la cola estática está llena
+                JOptionPane.showMessageDialog(this, "Static double queue is full", "Information", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            // Insertar al frente de la cola dinámica (sin depender de la cola estática)
+            try {
+                doubleEndedDynamicQueue.insertFront(value); // Inserta el valor al frente de la cola dinámica
+
+                // Limpiar y actualizar el ListBox para la cola dinámica
+                lstQueueDoubleList.clear();
+                for (Integer item : doubleEndedDynamicQueue.getQueueElements()) {
+                    lstQueueDoubleList.add(item);  // Agregar cada elemento al ListBox de la cola dinámica
+                }
+            } catch (IllegalStateException ex) {
+                // Manejar el error si la cola dinámica está llena
+                JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Limpiar el TextField y dar foco de nuevo
+        txtQueueDoubleValue.setText("");
+        txtQueueDoubleValue.requestFocus();
+    } catch (Exception ex) {
+        // Manejo de excepciones genéricas
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+}
+
+private boolean isInteger(String str) {
+    try {
+        Integer.parseInt(str);
+        return true;
+    } catch (NumberFormatException e) {
+        return false;
+    }
+    }//GEN-LAST:event_btnInsertFrontActionPerformed
+
+    private void btnInsertRearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertRearActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Validar si la entrada es un número
+        String inputValue = txtQueueDoubleValue.getText();
+        if (isInteger(inputValue)) {
+            int value = Integer.parseInt(inputValue);
+
+            // Insertar en la cola estática
+            if (!doubleEndedStaticQueue.isFull()) {
+                doubleEndedStaticQueue.insertRear(value); // Insertar al final de la cola estática
+
+                // Limpiar y actualizar el ListBox para la cola estática
+                lstQueueDobleVector.clear();
+                for (Integer item : doubleEndedStaticQueue.getQueueElements()) { // Obtener elementos de la cola estática
+                    lstQueueDobleVector.add(item);  // Agregar cada elemento al ListBox de la cola estática
+                }
+            } else {
+                // Manejar el error si la cola estática está llena
+                JOptionPane.showMessageDialog(this, "Static double queue is full", "Information", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            // Insertar en la cola dinámica
+            try {
+                doubleEndedDynamicQueue.insertRear(value); // Insertar al final de la cola dinámica
+
+                // Limpiar y actualizar el ListBox para la cola dinámica
+                lstQueueDoubleList.clear();
+                for (Integer item : doubleEndedDynamicQueue.getQueueElements()) { // Obtener elementos de la cola dinámica
+                    lstQueueDoubleList.add(item);  // Agregar cada elemento al ListBox de la cola dinámica
+                }
+            } catch (IllegalStateException ex) {
+                // Manejar el error si la cola dinámica está llena
+                JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } else {
+            // Si la entrada no es un número, mostrar mensaje de error
+            JOptionPane.showMessageDialog(this, "Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Limpiar el TextField y dar foco de nuevo
+        txtQueueDoubleValue.setText("");
+        txtQueueDoubleValue.requestFocus();
+    } catch (Exception ex) {
+        // Manejo de excepciones genéricas
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+}
+
+private boolean isInteger(String str) {
+    try {
+        Integer.parseInt(str);
+        return true;
+    } catch (NumberFormatException e) {
+        return false;
+    }
+    
+    }//GEN-LAST:event_btnInsertRearActionPerformed
+
+    private void btnDeleteFrontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteFrontActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Intentar eliminar el elemento desde el frente de la cola estática
+        try {
+            if (!doubleEndedStaticQueue.isEmpty()) { // Verificar si la cola estática no está vacía
+                doubleEndedStaticQueue.deleteFront(); // Eliminar desde el frente de la cola estática
+
+                // Limpiar y actualizar el ListBox para la cola estática
+                lstQueueDobleVector.clear();
+                for (Integer item : doubleEndedStaticQueue.getQueueElements()) { // Obtener elementos de la cola estática
+                    lstQueueDobleVector.add(item);  // Agregar cada elemento al ListBox de la cola estática
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Static queue is empty, cannot delete.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola estática
+            JOptionPane.showMessageDialog(this, "Static queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Intentar eliminar el elemento desde el frente de la cola dinámica
+        try {
+            if (!doubleEndedDynamicQueue.isEmpty()) { // Verificar si la cola dinámica no está vacía
+                doubleEndedDynamicQueue.deleteFront(); // Eliminar desde el frente de la cola dinámica
+
+                // Limpiar y actualizar el ListBox para la cola dinámica
+                lstQueueDoubleList.clear();
+                for (Integer item : doubleEndedDynamicQueue.getQueueElements()) { // Obtener elementos de la cola dinámica
+                    lstQueueDoubleList.add(item);  // Agregar cada elemento al ListBox de la cola dinámica
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Dynamic queue is empty, cannot delete.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola dinámica
+            JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    } catch (Exception ex) {
+        // Manejo de excepciones genéricas
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+        
+    }//GEN-LAST:event_btnDeleteFrontActionPerformed
+
+    private void btnDeleteRearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRearActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Intentar eliminar el elemento desde el final de la cola estática
+        try {
+            if (!doubleEndedStaticQueue.isEmpty()) { // Verificar si la cola estática no está vacía
+                doubleEndedStaticQueue.deleteRear(); // Eliminar desde el final de la cola estática
+
+                // Limpiar y actualizar el ListBox para la cola estática
+                lstQueueDobleVector.clear();
+                for (Integer item : doubleEndedStaticQueue.getQueueElements()) { // Obtener elementos de la cola estática
+                    lstQueueDobleVector.add(item);  // Agregar cada elemento al ListBox de la cola estática
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Static queue is empty, cannot delete.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola estática
+            JOptionPane.showMessageDialog(this, "Static queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Intentar eliminar el elemento desde el final de la cola dinámica
+        try {
+            if (!doubleEndedDynamicQueue.isEmpty()) { // Verificar si la cola dinámica no está vacía
+                doubleEndedDynamicQueue.deleteRear(); // Eliminar desde el final de la cola dinámica
+
+                // Limpiar y actualizar el ListBox para la cola dinámica
+                lstQueueDoubleList.clear();
+                for (Integer item : doubleEndedDynamicQueue.getQueueElements()) { // Obtener elementos de la cola dinámica
+                    lstQueueDoubleList.add(item);  // Agregar cada elemento al ListBox de la cola dinámica
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Dynamic queue is empty, cannot delete.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+         
+    }//GEN-LAST:event_btnDeleteRearActionPerformed
+
+    private void btnGetFrontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetFrontActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Obtener el primer elemento de la cola estática
+        try {
+            if (!doubleEndedStaticQueue.isEmpty()) { // Verificar si la cola estática no está vacía
+                int frontStatic = doubleEndedStaticQueue.getFront(); // Obtener el primer elemento de la cola estática
+                JOptionPane.showMessageDialog(this, "Front of static queue: " + frontStatic, "Information", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Static queue is empty, cannot get front.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola estática
+            JOptionPane.showMessageDialog(this, "Static queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Obtener el primer elemento de la cola dinámica
+        try {
+            if (!doubleEndedDynamicQueue.isEmpty()) { // Verificar si la cola dinámica no está vacía
+                int frontDynamic = doubleEndedDynamicQueue.getFront(); // Obtener el primer elemento de la cola dinámica
+                JOptionPane.showMessageDialog(this, "Front of dynamic queue: " + frontDynamic, "Information", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Dynamic queue is empty, cannot get front.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola dinámica
+            JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (Exception ex) {
+        // Manejo de excepciones genéricas
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_btnGetFrontActionPerformed
+
+    private void btnGetRearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetRearActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Obtener el último elemento de la cola estática
+        try {
+            if (!doubleEndedStaticQueue.isEmpty()) { // Verificar si la cola estática no está vacía
+                int rearStatic = doubleEndedStaticQueue.getRear(); // Obtener el último elemento de la cola estática
+                JOptionPane.showMessageDialog(this, "Rear of static queue: " + rearStatic, "Information", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Static queue is empty, cannot get rear.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola estática
+            JOptionPane.showMessageDialog(this, "Static queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Obtener el último elemento de la cola dinámica
+        try {
+            if (!doubleEndedDynamicQueue.isEmpty()) { // Verificar si la cola dinámica no está vacía
+                int rearDynamic = doubleEndedDynamicQueue.getRear(); // Obtener el último elemento de la cola dinámica
+                JOptionPane.showMessageDialog(this, "Rear of dynamic queue: " + rearDynamic, "Information", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Dynamic queue is empty, cannot get rear.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Manejar cualquier error de la cola dinámica
+            JOptionPane.showMessageDialog(this, "Dynamic queue error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (Exception ex) {
+        // Manejo de excepciones genéricas
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+        
+    }//GEN-LAST:event_btnGetRearActionPerformed
+
+    private void btnSizeDoubleQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSizeDoubleQueueActionPerformed
+        // TODO add your handling code here:
+{
+    try
+    {
+        // Obtener el tamaño de la cola estática
+        int staticQueueSize = doubleEndedStaticQueue.Size(); // Obtener el tamaño de la cola estática
+        MessageBox.Show($"Size of static queue: {staticQueueSize}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        // Obtener el tamaño de la cola dinámica
+        int dynamicQueueSize = doubleEndedDynamicQueue.Size(); // Obtener el tamaño de la cola dinámica
+        MessageBox.Show($"Size of dynamic queue: {dynamicQueueSize}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+    catch (Exception ex)
+    {
+        // Capturar y mostrar errores
+        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
+
+    }//GEN-LAST:event_btnSizeDoubleQueueActionPerformed
+private void updateListBoxes() {
+    // Limpiar los componentes visuales (por ejemplo, modelos de JList)
+    listModelPriorityQueueVV.clear();
+    listModelPriorityQueueVL.clear();
+    listModelPriorityQueueLL.clear();
+    listModelPriorityQueueLV.clear();
+
+    // Actualizar los componentes con las estructuras de datos
+    updateListBox(listModelPriorityQueueVV, vectorOfVectorsPQ);
+    updateListBox(listModelPriorityQueueVL, vectorOfListsPQ);
+    updateListBox(listModelPriorityQueueLL, listOfListsPQ);
+    updateListBox(listModelPriorityQueueLV, listOfVectorsPQ);
+}
+private <T> void updateListBox(DefaultListModel<String> listModel, T queue) {
+    // Limpiar el modelo del JList
+    listModel.clear();
+
+    // Convertir la cola a una lista de elementos (usando un método genérico o específico)
+    List<?> items = toList(queue);
+
+    // Agregar los elementos al modelo del JList
+    for (Object item : items) {
+        listModel.addElement(item.toString());
+    }
+}
+
+    private void btnEnqueuePriorityQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnqueuePriorityQueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Intentar convertir los valores de texto a enteros
+        int value = Integer.parseInt(txtQueuePriorityValue.getText());
+        int priority = Integer.parseInt(txtPriorityQueueLevel.getText());
+
+        // Encolar los valores en las diferentes estructuras de datos
+        vectorOfVectorsPQ.enqueue(value, priority);
+        vectorOfListsPQ.enqueue(value, priority);
+        listOfListsPQ.enqueue(value, priority);
+        listOfVectorsPQ.enqueue(value, priority);
+
+        // Actualizar los componentes visuales
+        updateListBoxes();
+    } catch (NumberFormatException e) {
+        // Mostrar mensaje si los valores ingresados no son válidos
+        JOptionPane.showMessageDialog(this, "Please enter a valid integer value.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_btnEnqueuePriorityQueueActionPerformed
+
+    private void btnDequeuePriorityQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDequeuePriorityQueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Verificar y realizar dequeue en vectorOfVectorsPQ
+        if (!vectorOfVectorsPQ.isEmpty()) {
+            Integer dequeuedItem = vectorOfVectorsPQ.dequeue();
+            JOptionPane.showMessageDialog(this, "Dequeued from vectorOfVectorsPQ: " + dequeuedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "vectorOfVectorsPQ is empty.");
+        }
+
+        // Verificar y realizar dequeue en vectorOfListsPQ
+        if (!vectorOfListsPQ.isEmpty()) {
+            Integer dequeuedItem = vectorOfListsPQ.dequeue();
+            JOptionPane.showMessageDialog(this, "Dequeued from vectorOfListsPQ: " + dequeuedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "vectorOfListsPQ is empty.");
+        }
+
+        // Verificar y realizar dequeue en listOfListsPQ
+        if (!listOfListsPQ.isEmpty()) {
+            Integer dequeuedItem = listOfListsPQ.dequeue();
+            JOptionPane.showMessageDialog(this, "Dequeued from listOfListsPQ: " + dequeuedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "listOfListsPQ is empty.");
+        }
+
+        // Verificar y realizar dequeue en listOfVectorsPQ
+        if (!listOfVectorsPQ.isEmpty()) {
+            Integer dequeuedItem = listOfVectorsPQ.dequeue();
+            JOptionPane.showMessageDialog(this, "Dequeued from listOfVectorsPQ: " + dequeuedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "listOfVectorsPQ is empty.");
+        }
+
+        // Actualizar los JList después de realizar el dequeue
+        updateListBoxes();
+
+    } catch (Exception ex) {
+        // Si ocurre algún error, mostrar mensaje al usuario
+        JOptionPane.showMessageDialog(this, "An error occurred while dequeuing: " + ex.getMessage(), 
+                                      "Error", JOptionPane.ERROR_MESSAGE);
+    }
+         
+    }//GEN-LAST:event_btnDequeuePriorityQueueActionPerformed
+
+    private void btnPeekPriorityQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeekPriorityQueueActionPerformed
+        // TODO add your handling code here:
+         try {
+        // Verificar si vectorOfVectorsPQ no está vacío y obtener el próximo elemento
+        if (!vectorOfVectorsPQ.isEmpty()) {
+            Integer peekedItem = vectorOfVectorsPQ.peek();
+            JOptionPane.showMessageDialog(this, "Next item in vectorOfVectorsPQ: " + peekedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "vectorOfVectorsPQ is empty.");
+        }
+
+        // Verificar si vectorOfListsPQ no está vacío y obtener el próximo elemento
+        if (!vectorOfListsPQ.isEmpty()) {
+            Integer peekedItem = vectorOfListsPQ.peek();
+            JOptionPane.showMessageDialog(this, "Next item in vectorOfListsPQ: " + peekedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "vectorOfListsPQ is empty.");
+        }
+
+        // Verificar si listOfListsPQ no está vacío y obtener el próximo elemento
+        if (!listOfListsPQ.isEmpty()) {
+            Integer peekedItem = listOfListsPQ.peek();
+            JOptionPane.showMessageDialog(this, "Next item in listOfListsPQ: " + peekedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "listOfListsPQ is empty.");
+        }
+
+        // Verificar si listOfVectorsPQ no está vacío y obtener el próximo elemento
+        if (!listOfVectorsPQ.isEmpty()) {
+            Integer peekedItem = listOfVectorsPQ.peek();
+            JOptionPane.showMessageDialog(this, "Next item in listOfVectorsPQ: " + peekedItem);
+        } else {
+            JOptionPane.showMessageDialog(this, "listOfVectorsPQ is empty.");
+        }
+    } catch (Exception ex) {
+        // Si ocurre algún error inesperado, mostrar un mensaje al usuario
+        JOptionPane.showMessageDialog(this, "An error occurred while peeking: " + ex.getMessage(),
+                                      "Error", JOptionPane.ERROR_MESSAGE);
+    }
+         
+    }//GEN-LAST:event_btnPeekPriorityQueueActionPerformed
+
+    private void btnAddNodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNodeActionPerformed
+        // TODO add your handling code here:
+          String nodeName = txtNode.getText().trim();
+    if (!nodeName.isEmpty()) {
+        // Verificar si el nodo ya existe en el grafo
+        if (graph.getNodes().stream().anyMatch(node -> node.getName().equals(nodeName))) {
+            JOptionPane.showMessageDialog(this, 
+                                          "The node '" + nodeName + "' already exists.", 
+                                          "Error", 
+                                          JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Si no existe, añadir el nodo
+            GraphNode newNode = new GraphNode(nodeName);
+            graph.addNode(newNode);
+            JOptionPane.showMessageDialog(this, 
+                                          "Node '" + nodeName + "' added.", 
+                                          "Success", 
+                                          JOptionPane.INFORMATION_MESSAGE);
+
+            txtNode.setText(""); // Limpiar el campo de texto
+            
+            String weightText = txtWeight.getText().trim();
+            if (!weightText.isEmpty()) {
+                try {
+                    int weight = Integer.parseInt(weightText);
+                    txtGraphRepresentation.setText(graph.showAdjacencyListWithWeights());
+                } catch (NumberFormatException e) {
+                    // Si el peso no es válido, mostrar lista de adyacencia sin pesos
+                    txtGraphRepresentation.setText(graph.showAdjacencyList());
+                }
+            } else {
+                txtGraphRepresentation.setText(graph.showAdjacencyList());
+            }
+
+            txtFrom.setText(""); // Limpiar el campo "Desde"
+            txtTo.setText("");   // Limpiar el campo "Hacia"
+        }
+    }
+    
+    }//GEN-LAST:event_btnAddNodeActionPerformed
+
+    private void btnAddEdgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEdgeActionPerformed
+        // TODO add your handling code here:
+         String fromNodeName = txtFrom.getText().trim();
+    String toNodeName = txtTo.getText().trim();
+    String weightText = txtWeight.getText().trim(); // Campo de texto para el peso
+
+    GraphNode fromNode = graph.getNodes().stream()
+                              .filter(n -> n.getName().equals(fromNodeName))
+                              .findFirst()
+                              .orElse(null);
+
+    GraphNode toNode = graph.getNodes().stream()
+                            .filter(n -> n.getName().equals(toNodeName))
+                            .findFirst()
+                            .orElse(null);
+
+    if (fromNode != null && toNode != null) {
+        // Si el campo de peso no está vacío, se usa el constructor con peso
+        if (!weightText.isEmpty()) {
+            try {
+                int weight = Integer.parseInt(weightText);
+                if (chkDirected.isSelected()) {
+                    graph.addEdge(fromNode, toNode, weight);
+                    JOptionPane.showMessageDialog(this, 
+                                                  "Edge added from '" + fromNodeName + 
+                                                  "' to '" + toNodeName + 
+                                                  "' with weight " + weight + ".");
+                } else {
+                    graph.addNoDirectedEdge(fromNode, toNode, weight);
+                    JOptionPane.showMessageDialog(this, 
+                                                  "Edge added from '" + fromNodeName + 
+                                                  "' to '" + toNodeName + 
+                                                  "' with weight " + weight + ".");
+                }
+                txtGraphRepresentation.setText(graph.showAdjacencyListWithWeights());
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, 
+                                              "Invalid weight value. Please enter a numeric weight.", 
+                                              "Error", 
+                                              JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // Si no se especifica peso, se usa el constructor sin peso
+            if (chkDirected.isSelected()) {
+                graph.addEdge(fromNode, toNode);
+                JOptionPane.showMessageDialog(this, 
+                                              "Edge added from '" + fromNodeName + 
+                                              "' to '" + toNodeName + "'.");
+            } else {
+                graph.addNoDirectedEdge(fromNode, toNode);
+                JOptionPane.showMessageDialog(this, 
+                                              "Edge added from '" + fromNodeName + 
+                                              "' to '" + toNodeName + "'.");
+            }
+            txtGraphRepresentation.setText(graph.showAdjacencyList());
+        }
+        txtFrom.setText(""); // Limpiar los campos de texto
+        txtTo.setText("");
+    } else {
+        JOptionPane.showMessageDialog(this, 
+                                      "One or both nodes do not exist.", 
+                                      "Error", 
+                                      JOptionPane.ERROR_MESSAGE);
+    }
+    
+    }//GEN-LAST:event_btnAddEdgeActionPerformed
+
+    private void btnRemoveNodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveNodeActionPerformed
+        // TODO add your handling code here:
+          String nodeName = txtNode.getText().trim();
+    GraphNode nodeToRemove = graph.getNodes().stream()
+                                  .filter(n -> n.getName().equals(nodeName))
+                                  .findFirst()
+                                  .orElse(null);
+
+    if (nodeToRemove != null) {
+        graph.removeNode(nodeToRemove);
+        JOptionPane.showMessageDialog(this, 
+                                      "Node '" + nodeName + "' deleted.", 
+                                      "Success", 
+                                      JOptionPane.INFORMATION_MESSAGE);
+        txtNode.setText("");
+
+        // Actualizar la representación de la lista de adyacencia
+        String weightText = txtWeight.getText().trim();
+        if (!weightText.isEmpty()) {
+            try {
+                int weight = Integer.parseInt(weightText);
+                txtGraphRepresentation.setText(graph.showAdjacencyListWithWeights());
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, 
+                                              "Invalid weight value. Showing adjacency list without weights.", 
+                                              "Warning", 
+                                              JOptionPane.WARNING_MESSAGE);
+                txtGraphRepresentation.setText(graph.showAdjacencyList());
+            }
+        } else {
+            txtGraphRepresentation.setText(graph.showAdjacencyList());
+        }
+        txtFrom.setText(""); // Limpiar los campos de texto
+        txtTo.setText("");
+    } else {
+        JOptionPane.showMessageDialog(this, 
+                                      "Node not found.", 
+                                      "Error", 
+                                      JOptionPane.WARNING_MESSAGE);
+    }
+    
+    }//GEN-LAST:event_btnRemoveNodeActionPerformed
+
+    private void btnRemoveEdgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveEdgeActionPerformed
+        // TODO add your handling code here:
+         String fromNodeName = txtFrom.getText().trim();
+    String toNodeName = txtTo.getText().trim();
+    boolean isDirected = chkDirected.isSelected(); // CheckBox para determinar si la arista es dirigida.
+
+    GraphNode fromNode = graph.getNodes().stream()
+                              .filter(n -> n.getName().equals(fromNodeName))
+                              .findFirst()
+                              .orElse(null);
+
+    GraphNode toNode = graph.getNodes().stream()
+                            .filter(n -> n.getName().equals(toNodeName))
+                            .findFirst()
+                            .orElse(null);
+
+    if (fromNode != null && toNode != null) {
+        if (isDirected) {
+            graph.removeEdge(fromNode, toNode);
+            JOptionPane.showMessageDialog(this, 
+                                          "Directed edge removed from '" + fromNodeName + "' to '" + toNodeName + "'.", 
+                                          "Success", 
+                                          JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            graph.removeEdge(fromNode, toNode);
+            graph.removeEdge(toNode, fromNode);
+            JOptionPane.showMessageDialog(this, 
+                                          "Undirected edge removed between '" + fromNodeName + "' and '" + toNodeName + "'.", 
+                                          "Success", 
+                                          JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        String weightText = txtWeight.getText().trim();
+        if (!weightText.isEmpty()) {
+            try {
+                int weight = Integer.parseInt(weightText);
+                txtGraphRepresentation.setText(graph.showAdjacencyListWithWeights());
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, 
+                                              "Invalid weight value. Showing adjacency list without weights.", 
+                                              "Warning", 
+                                              JOptionPane.WARNING_MESSAGE);
+                txtGraphRepresentation.setText(graph.showAdjacencyList());
+            }
+        } else {
+            txtGraphRepresentation.setText(graph.showAdjacencyList());
+        }
+
+        txtFrom.setText(""); // Limpiar los campos de texto
+        txtTo.setText("");
+    } else {
+        JOptionPane.showMessageDialog(this, 
+                                      "One or both nodes do not exist.", 
+                                      "Error", 
+                                      JOptionPane.WARNING_MESSAGE);
+    }
+    
+    }//GEN-LAST:event_btnRemoveEdgeActionPerformed
+
+    private void btnShowDFSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowDFSActionPerformed
+        // TODO add your handling code here:
+         txtGraphRepresentation.setText(""); // Limpiar el campo de texto
+
+    // Obtener el nombre del nodo de inicio desde el campo de texto
+    String startNodeName = txtStartNode.getText();
+
+    // Buscar el nodo en el grafo cuyo nombre coincida con el ingresado
+    GraphNode startNode = null;
+    for (GraphNode node : graph.getNodes()) {
+        if (node.getName().equals(startNodeName)) {
+            startNode = node;
+            break;
+        }
+    }
+
+    if (startNode != null) {
+        // Realizar DFS desde el nodo encontrado
+        String result = graph.DFSIterative(startNode);
+        txtGraphRepresentation.setText(result); // Mostrar el resultado en el campo de texto
+    } else {
+        // Si el nodo no existe, mostrar un mensaje de error
+        txtGraphRepresentation.setText("Node not found.");
+    }
+    
+    }//GEN-LAST:event_btnShowDFSActionPerformed
+
+    private void btnShowBFSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowBFSActionPerformed
+        // TODO add your handling code here:
+        txtGraphRepresentation.setText(""); // Limpiar el campo de texto
+
+    // Obtener el nombre del nodo de inicio desde el campo de texto
+    String startNodeName = txtStartNode.getText();
+
+    // Buscar el nodo en el grafo cuyo nombre coincida con el ingresado
+    GraphNode startNode = null;
+    for (GraphNode node : graph.getNodes()) {
+        if (node.getName().equals(startNodeName)) {
+            startNode = node;
+            break;
+        }
+    }
+
+    if (startNode != null) {
+        // Realizar BFS desde el nodo encontrado
+        String result = graph.BFS(startNode);
+        txtGraphRepresentation.setText(result); // Mostrar el resultado en el campo de texto
+    } else {
+        // Si el nodo no existe, mostrar un mensaje de error
+        txtGraphRepresentation.setText("Node not found.");
+    }
+    
+    }//GEN-LAST:event_btnShowBFSActionPerformed
+
+    private void btnShowDFSRecursiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowDFSRecursiveActionPerformed
+        // TODO add your handling code here:
+         txtGraphRepresentation.setText(""); // Limpiar el campo de texto
+
+    // Obtener el nombre del nodo de inicio desde el campo de texto
+    String startNodeName = txtStartNode.getText();
+
+    // Buscar el nodo en el grafo cuyo nombre coincida con el ingresado
+    GraphNode startNode = null;
+    for (GraphNode node : graph.getNodes()) {
+        if (node.getName().equals(startNodeName)) {
+            startNode = node;
+            break;
+        }
+    }
+
+    if (startNode != null) {
+        // Realizar DFS recursivo desde el nodo encontrado
+        String result = graph.DFSRecursive(startNode); // Llamada al DFS recursivo
+        txtGraphRepresentation.setText(result); // Mostrar el resultado en el campo de texto
+    } else {
+        // Si el nodo no existe, mostrar un mensaje de error
+        txtGraphRepresentation.setText("Node not found.");
+    }
+    
+    }//GEN-LAST:event_btnShowDFSRecursiveActionPerformed
+
+    private void btnRemoveAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveAllActionPerformed
+        // TODO add your handling code here:
+         // Show a confirmation dialog in English
+    int result = JOptionPane.showConfirmDialog(null, "Are you sure you want to remove all nodes and edges?", 
+                                                "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+    if (result == JOptionPane.YES_OPTION) {
+        // Remove all nodes and edges
+        graph.removeGraph();
+        
+        // Show success message
+        JOptionPane.showMessageDialog(null, "All nodes and edges removed.", 
+                                      "Success", JOptionPane.INFORMATION_MESSAGE);
+        
+        // Clear the graph representation text field
+        txtGraphRepresentation.setText("");
+    }
+    
+    }//GEN-LAST:event_btnRemoveAllActionPerformed
+
+    private void btnSetNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSetNumbersActionPerformed
+        // TODO add your handling code here:
+         Random random = new Random();
+    
+    // Create an array of random numbers between 1 and 100 (exclusive)
+    int[] numbers = new int[8];
+    for (int i = 0; i < numbers.length; i++) {
+        numbers[i] = random.nextInt(99) + 1; // Generate random numbers from 1 to 99
+    }
+    
+    // Display the numbers (you need to implement this method to display the numbers in your desired format)
+    displayNumbers(numbers);
+}
+
+private void displayNumbers(int[] numbers) {
+    // You can display the numbers in a JTextArea, JLabel, or other UI components
+    StringBuilder sb = new StringBuilder();
+    for (int num : numbers) {
+        sb.append(num).append(" ");
+    }
+    // For example, display in a JTextArea (make sure you have a JTextArea named txtNumbers)
+    txtNumbers.setText(sb.toString());
+    }//GEN-LAST:event_btnSetNumbersActionPerformed
+
+    private void btnSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortActionPerformed
+        // TODO add your handling code here:
+         if (numbers == null || numbers.length == 0) {
+        JOptionPane.showMessageDialog(null, "Please generate numbers first.", "Warning", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    String selectedMethod = (String) cmbAlgorithms.getSelectedItem();
+    long startTime = System.currentTimeMillis();
+
+    switch (selectedMethod) {
+        case "Gnome Sort":
+            GnomeSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Bubble Sort":
+            BubbleSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Comb Sort":
+            CombSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Pigeonhole Sort":
+            PigeonHoleSort.sort(numbers, this::displayNumbersPigeonhole);
+            break;
+        case "Cocktail Sort":
+            CocktailSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Heap Sort":
+            HeapSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Insertion Sort":
+            InsertionSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Shell Sort":
+            ShellSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Radix MSD Sort":
+            RadixMSDSort.sort(numbers, this::displayNumbersRadix, this::showMessage);
+            lblStatus.setText("");
+            break;
+        case "Radix LSD Sort":
+            RadixLSDSort.sort(numbers, this::displayNumbersRadix, this::showMessage);
+            break;
+        case "Selection Sort":
+            SelectionSort.sort(numbers, this::displayNumbers);
+            break;
+        case "Counting Sort":
+            CountingSort.sort(numbers, this::displayNumbersMerge);
+            break;
+        case "Bucket Sort":
+            BucketSort.sort(numbers, this::displayNumbersMerge);
+            break;
+        case "Merge Sort":
+            MergeAlgorithms.mergeSort(numbers, 0, numbers.length - 1, this::displayNumbersMerge);
+            break;
+        case "Natural Merge":
+            MergeAlgorithms.naturalMerge(numbers, this::displayNumbersMerge);
+            break;
+        case "Direct Merge":
+            MergeAlgorithms.directMerge(numbers, this::displayNumbersMerge);
+            break;
+        case "Quick Sort":
+            QuickSort.sort(numbers, 0, numbers.length - 1, this::displayNumbers);
+            break;
+        default:
+            JOptionPane.showMessageDialog(null, "Invalid sorting method.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+    }
+
+    long endTime = System.currentTimeMillis();
+    long elapsedTime = endTime - startTime;
+    JOptionPane.showMessageDialog(null, String.format("Sorting Completed!\n\nMethod: %s\nTime: %.2f ms", selectedMethod, elapsedTime / 1000.0),
+            "Result", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnSortActionPerformed
+
+    private void btnPriorityQueueSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPriorityQueueSizeActionPerformed
+        // TODO add your handling code here:
+          try {
+        // Show the size of each queue
+        JOptionPane.showMessageDialog(null, "vectorOfVectorsPQ size: " + vectorOfVectorsPQ.size());
+        JOptionPane.showMessageDialog(null, "vectorOfListsPQ size: " + vectorOfListsPQ.size());
+        JOptionPane.showMessageDialog(null, "listOfListsPQ size: " + listOfListsPQ.size());
+        JOptionPane.showMessageDialog(null, "listOfVectorsPQ size: " + listOfVectorsPQ.size());
+    } catch (Exception ex) {
+        // Handle any unexpected errors
+        JOptionPane.showMessageDialog(null, "An error occurred while retrieving the sizes: " + ex.getMessage());
+    }
+          
+    }//GEN-LAST:event_btnPriorityQueueSizeActionPerformed
+
+    private void btnInsertNodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertNodeActionPerformed
+        // TODO add your handling code here:
+          try {
+        int value = Integer.parseInt(txtNodeValue.getText());
+        root.insert(value);
+        drawTree();
+        txtNodeValue.setText("");  // Clear the input field
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid integer.");
+    }
+    }//GEN-LAST:event_btnInsertNodeActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        try {
+        int value = Integer.parseInt(txtNodeValue.getText());
+        root = root.delete(root, value); // Delete the node
+        drawTree();
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid integer.");
+    }
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+         try {
+        int value = Integer.parseInt(txtNodeValue.getText());
+        BinaryTree.Node foundNode = root.search(value);
+        JOptionPane.showMessageDialog(this, root.getNodeInfo(foundNode, "Found"));
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid integer.");
+    }
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnPreOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreOrderActionPerformed
+        // TODO add your handling code here:
+         String result = preOrderTraversal(root);
+    txtOutput.setText(result);
+    }//GEN-LAST:event_btnPreOrderActionPerformed
+
+    private String preOrderTraversal(BinaryTree.Node node) {
+    if (node == null) return "";
+    return node.value + ", " + preOrderTraversal(node.left) + preOrderTraversal(node.right);
+    }
+    
+    private void btnPostOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostOrderActionPerformed
+        // TODO add your handling code here:
+         String result = postOrderTraversal(root);
+    txtOutput.setText(result);
+    }//GEN-LAST:event_btnPostOrderActionPerformed
+
+    private String postOrderTraversal(BinaryTree.Node node) {
+    if (node == null) return "";
+    return postOrderTraversal(node.left) + postOrderTraversal(node.right) + node.value + ", ";
+    }
+    
+    private void btnInOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInOrderActionPerformed
+        // TODO add your handling code here:
+         String result = inOrderTraversal(root);
+    txtOutput.setText(result);
+    }//GEN-LAST:event_btnInOrderActionPerformed
+
+    private String inOrderTraversal(BinaryTree.Node node) {
+    if (node == null) return "";
+    return inOrderTraversal(node.left) + node.value + ", " + inOrderTraversal(node.right);
+    }
+    
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+         root = new BinaryTree.Node(); // Set the root to a new node, effectively clearing the tree
+         drawTree();
+    }//GEN-LAST:event_btnClearActionPerformed
+    
+    private void displayNumbers(int[] array, int currentIndex, int compareIndex) {
+    lstNumbersSort.clearSelection();
+    lstNumbersSort.removeAllItems();
+    for (int i = 0; i < array.length; i++) {
+        String itemText = Integer.toString(array[i]);
+        if (i == currentIndex || i == compareIndex) {
+            itemText = "[" + itemText + "]";
+        }
+        lstNumbersSort.addItem(itemText);
+    }
+}
+
+private void displayNumbersPigeonhole(int[] numbers) {
+    lstNumbersSort.removeAllItems();
+    for (int number : numbers) {
+        lstNumbersSort.addItem(Integer.toString(number));
+    }
+}
+
+private void displayNumbersRadix(int[] numbers) {
+    lstNumbersSort.removeAllItems();
+    for (int number : numbers) {
+        lstNumbersSort.addItem(number);
+    }
+}
+
+private void showMessage(String message) {
+    lblStatus.setText(message);  // Update a label on the form
+    lblStatus.repaint();
+}
+
+private void displayNumbersMerge(int[] array, String message) {
+    lstNumbersSort.removeAllItems();
+    lstNumbersSort.addItem(message);
+    lstNumbersSort.addItem("[" + String.join(", ", Arrays.stream(array).mapToObj(Integer::toString).toArray(String[]::new)) + "]");
+    lstNumbersSort.addItem("");  // Add an empty line to separate steps
+}
+private void drawTree() {
+    // Este método será usado para dibujar el árbol en un JPanel
+    Graphics g = panelTree.getGraphics();
+    g.setColor(Color.WHITE);
+    g.fillRect(0, 0, panelTree.getWidth(), panelTree.getHeight()); // Limpia el panel antes de dibujar
+
+    if (root.value != null) {
+        drawNode(g, root, panelTree.getWidth() / 2, 20, 100); // Comienza a dibujar desde el centro del Panel
+    }
+}
+
+private void drawNode(Graphics g, BinaryTree.Node node, int x, int y, int xOffset) {
+    if (node == null) return;
+
+    // Limitar la posición dentro del Panel
+    int panelWidth = panelTree.getWidth();
+    int panelHeight = panelTree.getHeight();
+
+    // Asegurar que las coordenadas x, y no se salgan del área del Panel
+    x = Math.max(30, Math.min(panelWidth - 30, x));   // Limita x entre 30 y panelWidth - 30
+    y = Math.max(30, Math.min(panelHeight - 30, y));  // Limita y entre 30 y panelHeight - 30
+
+    // Dibuja el nodo
+    g.setColor(Color.LIGHT_GRAY);
+    g.fillOval(x - 15, y - 15, 30, 30);
+    g.setColor(Color.BLACK);
+    g.drawString(node.value.toString(), x - 10, y - 10);
+
+    // Dibuja las aristas
+    if (node.left != null) {
+        int leftX = x - xOffset;
+        int leftY = y + 60;
+        g.drawLine(x, y, leftX, leftY);
+        drawNode(g, node.left, leftX, leftY, xOffset / 2);
+    }
+
+    if (node.right != null) {
+        int rightX = x + xOffset;
+        int rightY = y + 60;
+        g.drawLine(x, y, rightX, rightY);
+        drawNode(g, node.right, rightX, rightY, xOffset / 2);
+    }
+}
+
+
+
+
+      private void updateQueueDisplay(Object queue, JList<String> listBox) {
+     DefaultListModel<String> model = new DefaultListModel<>();
+     listBox.setModel(model);
+
+     if (queue instanceof StaticQueue) {
+        StaticQueue staticQueue = (StaticQueue) queue;
+        StaticQueue tempQueue = new StaticQueue(staticQueue.getCapacity());
+
+        while (!staticQueue.isEmpty()) {
+            int value = staticQueue.dequeue();
+            model.addElement(String.valueOf(value));
+            tempQueue.enqueue(value);
+        }
+
+        // Restaurar los elementos a la cola estática
+        while (!tempQueue.isEmpty()) {
+            staticQueue.enqueue(tempQueue.dequeue());
+        }
+     } else if (queue instanceof DynamicQueue) {
+        DynamicQueue dynamicQueue = (DynamicQueue) queue;
+        DynamicQueue tempQueue = new DynamicQueue();
+
+        while (!dynamicQueue.isEmpty()) {
+            int value = dynamicQueue.dequeue();
+            model.addElement(String.valueOf(value));
+            tempQueue.enqueue(value);
+        }
+
+        // Restaurar los elementos a la cola dinámica
+        while (!tempQueue.isEmpty()) {
+            dynamicQueue.enqueue(tempQueue.dequeue());
+        }
+     } else if (queue instanceof CircularQueue) {
+        CircularQueue circularQueue = (CircularQueue) queue;
+        CircularQueue tempQueue = new CircularQueue(circularQueue.getCapacity());
+
+        while (!circularQueue.isEmpty()) {
+            int value = circularQueue.dequeue();
+            model.addElement(String.valueOf(value));
+            tempQueue.enqueue(value);
+        }
+
+        // Restaurar los elementos a la cola circular
+        while (!tempQueue.isEmpty()) {
+            circularQueue.enqueue(tempQueue.dequeue());
+        }
+     }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -1207,10 +2938,10 @@ public class Form_Proyect extends javax.swing.JFrame {
     private javax.swing.JTextField txtPriorityQueueLevel;
     private javax.swing.JTextField txtQueueDoubleValue;
     private javax.swing.JTextField txtQueuePriorityValue;
+    private javax.swing.JTextField txtStackValue;
     private javax.swing.JTextField txtStartNode;
     private javax.swing.JTextField txtTo;
     private javax.swing.JTextField txtValue;
-    private javax.swing.JTextField txtValue2;
     private javax.swing.JTextField txtValueSimpleQueue;
     private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables

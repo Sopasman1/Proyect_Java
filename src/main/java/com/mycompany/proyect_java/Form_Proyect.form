@@ -23,13 +23,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" pref="811" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jTabbedPane1" pref="472" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -163,6 +163,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Remove"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnRemoveActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BtnContains">
               <Properties>
@@ -171,6 +174,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Contains"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnContainsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BtnCout">
               <Properties>
@@ -179,6 +185,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cout"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCoutActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
@@ -295,6 +304,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -321,7 +333,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                      <Component id="txtValue2" min="-2" pref="118" max="-2" attributes="0"/>
+                                      <Component id="txtStackValue" min="-2" pref="118" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
@@ -372,7 +384,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txtValue2" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <Component id="txtStackValue" min="-2" pref="40" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -407,7 +419,7 @@
                 <Property name="text" type="java.lang.String" value="Value:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtValue2">
+            <Component class="javax.swing.JTextField" name="txtStackValue">
             </Component>
             <Component class="javax.swing.JButton" name="btnPop">
               <Properties>
@@ -416,6 +428,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pop"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPopActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnPeek">
               <Properties>
@@ -424,6 +439,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Peek"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPeekActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSize">
               <Properties>
@@ -432,6 +450,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Size"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSizeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnPush">
               <Properties>
@@ -440,6 +461,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Push"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPushActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
               <AuxValues>
@@ -511,7 +535,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane2" pref="799" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane2" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -520,7 +544,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane2" pref="431" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane2" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -652,6 +676,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Dequeue"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDequeueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnPeekQueue">
                       <Properties>
@@ -660,6 +687,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Peek"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPeekQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnEnqueue">
                       <Properties>
@@ -668,6 +698,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Enqueue"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnqueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnSizeQueue">
                       <Properties>
@@ -676,6 +709,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Size"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSizeQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel11">
                       <Properties>
@@ -879,6 +915,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Insert Front"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertFrontActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnGetFront">
                       <Properties>
@@ -887,6 +926,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Get Front"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetFrontActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnInsertRear">
                       <Properties>
@@ -895,6 +937,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Insert Rear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertRearActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnDeleteFront">
                       <Properties>
@@ -903,6 +948,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Delete Front"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteFrontActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnDeleteRear">
                       <Properties>
@@ -911,6 +959,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Delete Rear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteRearActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnGetRear">
                       <Properties>
@@ -919,6 +970,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Get Rear"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetRearActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnSizeDoubleQueue">
                       <Properties>
@@ -927,6 +981,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Size"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSizeDoubleQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel14">
                       <Properties>
@@ -1141,6 +1198,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Enqueue"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnqueuePriorityQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnDequeuePriorityQueue">
                       <Properties>
@@ -1149,6 +1209,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Dequeue"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDequeuePriorityQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnPeekPriorityQueue">
                       <Properties>
@@ -1157,6 +1220,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Peek"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPeekPriorityQueueActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnPriorityQueueSize">
                       <Properties>
@@ -1165,6 +1231,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Size"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPriorityQueueSizeActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel18">
                       <Properties>
@@ -1397,6 +1466,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Insert"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertNodeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnDelete">
               <Properties>
@@ -1405,6 +1477,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSearch">
               <Properties>
@@ -1413,6 +1488,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnPostOrder">
               <Properties>
@@ -1421,6 +1499,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Post Order"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPostOrderActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnPreOrder">
               <Properties>
@@ -1429,6 +1510,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pre Order"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPreOrderActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnInOrder">
               <Properties>
@@ -1437,6 +1521,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="In Orden"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInOrderActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNodeValue">
             </Component>
@@ -1449,6 +1536,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clear Tree"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="panelTree">
 
@@ -1642,11 +1732,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Node"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddNodeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveNode">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Remove"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveNodeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
               <Properties>
@@ -1695,11 +1791,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Edge"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddEdgeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveEdge">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Remove Edge"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveEdgeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
               <Properties>
@@ -1723,21 +1825,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show DFS Algorithm"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnShowDFSActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnShowBFS">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show Bfs Algorithm"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnShowBFSActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnShowDFSRecursive">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Shoe DFS Recursive"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnShowDFSRecursiveActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnRemoveAll">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Remove All"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveAllActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtGraphRepresentation">
             </Component>
@@ -1805,6 +1919,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sort"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSortActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSetNumbers">
               <Properties>
@@ -1813,6 +1930,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Generate Numbers"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSetNumbersActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane16">
               <AuxValues>

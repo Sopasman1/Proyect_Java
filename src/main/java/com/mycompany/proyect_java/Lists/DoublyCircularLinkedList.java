@@ -151,6 +151,10 @@ public class DoublyCircularLinkedList {
         return head;
     }
 
+    public void add(com.mycompany.proyect_java.Nodes.DoubleNode newDoubleNode) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Clase interna para representar un nodo doblemente enlazado
     public static class DoubleNode {
         int value;
